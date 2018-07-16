@@ -1,0 +1,12 @@
+<launch>
+
+  <arg name="config" default="$(find controller_ros_tool)/launch/params/controller_ros_tool_parameters.yaml" />
+
+  <node pkg="controller_ros_tool" type="controller_ros_tool" name="controller_ros_tool" output="screen">
+    <rosparam command="load" file="$(arg config)"/>
+    <remap from="/controller_ros_tool/servo_command" to="/motor_interface/servo_command" />
+    <remap from="/controller_ros_tool/motor_command" to="/motor_interface/motor_command" />    
+    <remap from="/path" to="/move_base/TrajectoryPlannerROS/global_plan" />
+  </node>
+
+</launch>

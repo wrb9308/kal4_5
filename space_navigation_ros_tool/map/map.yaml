@@ -1,0 +1,10 @@
+image: Map_version16.png #strecke_bearbeitet_28_07.png #map_downsampled_neu.png
+# berechnet: 105.5 c7 = 30 px (Spurbreite in Realität bzw. Bild)
+# ergibt
+resolution: 0.0351666667
+# resolution: 0.0345
+origin: [-0.05, -0.50, 0.0]
+occupied_thresh: 0.3
+free_thresh: 0.1
+negate: 0
+
